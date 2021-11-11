@@ -1,0 +1,43 @@
+/* ========
+Single Tile 
+*/
+.body-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+}
+.single-tile-form {
+	background-color: var(--formBackgroundColor);
+	padding: 1rem;
+	max-width: 35rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+}
+.form-control.edit {
+	max-width: 35rem;
+	width: 100%;
+	display: flex;
+	align-self: center;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+	/* flex: 1; */
+	gap: 1rem;
+}
+.tile-edit-completed {
+	cursor: pointer;
+	width: 1.2rem;
+}
+/* Back to Tiles button */
+.back-link {
+	/* text-align: center; */
+	align-self: center;
+}
+.single-tile-form .form-alert {
+	text-align: center;
+	margin-top: 1rem;
+}

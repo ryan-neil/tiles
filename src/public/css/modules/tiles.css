@@ -1,0 +1,84 @@
+/* ========
+Tiles
+*/
+.empty-list {
+	margin: auto;
+}
+.tiles-container {
+	width: 100%;
+}
+.tiles {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 1.6rem;
+}
+.single-tile {
+	min-width: 275px;
+	/* max-width: 275px; */
+	height: auto;
+	padding: 0.6rem 0.8rem;
+	background: var(--tilesBackgroundColor);
+	border-radius: var(--borderRadius);
+	box-shadow: var(--shadow-2);
+	transition: var(--transition);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex: 1;
+	gap: 1rem;
+
+	/* outline: 1px solid red; */
+}
+.single-tile:hover {
+	box-shadow: var(--shadow-4);
+}
+.single-tile span {
+	display: inline-block;
+	width: 0.5rem;
+	height: 0.5rem;
+	margin-left: -1.25rem;
+	margin-right: 1.5rem;
+}
+.tile-completed {
+	opacity: 0.50;
+	text-decoration: line-through;
+}
+.loading-text {
+	visibility: hidden;
+	/* visibility: visible; */
+}
+/* Tile Links */
+.tile-links {
+	height: 25px;
+	display: flex;
+	align-items: center;
+	/* justify-content: space-between; */
+	justify-content: flex-end;
+}
+.tile-icon-wrap {
+	padding: 0.15rem;
+	border-radius: 0.25rem;
+}
+.tile-icon-wrap:hover {
+	transition: var(--transition);
+	background-color: var(--iconHoverColor);
+}
+/* Icons */
+.tile-icon {
+	height: 1rem;
+	width: 1rem;
+}
+.tile-icon.edit {
+	background-image: url("../../images/edit.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.tile-icon.delete {
+	background-image: url("../../images/delete.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}

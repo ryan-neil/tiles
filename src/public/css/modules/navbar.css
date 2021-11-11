@@ -1,0 +1,30 @@
+.nav-container {
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+}
+.logo-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	transition: var(--transition);
+}
+.logo-wrapper:hover {
+	opacity: 0.9;
+}
+.logo-text {
+	font-family: var(--logoFont);
+	font-size: 3rem;
+	line-height: 0;
+}
+.dark-mode-toggle svg {
+	padding: 0.15rem;
+	border-radius: var(--borderRadiusSmall);
+	cursor: pointer;
+	transition: var(--transition);
+}
+.dark-mode-toggle svg:hover {
+	background-color: var(--iconHoverColor);
+}
