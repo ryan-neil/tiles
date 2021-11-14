@@ -181,7 +181,7 @@ App Container
 	height: auto;
 	max-width: var(--max-width);
 	width: 100%;
-	padding: 1rem;
+	padding: 2rem 1rem;
 
 	margin: auto;
 }
