@@ -9,7 +9,7 @@ const notFound = require('./src/middleware/notFound');
 const errorHandlerMiddleware = require('./src/middleware/errorHandler');
 
 // serve middleware
-app.use(express.static('./src/public'));
+app.use(express.static('../client'));
 app.use(express.json());
 
 // serve routes
