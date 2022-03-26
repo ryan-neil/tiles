@@ -32,7 +32,6 @@ const showTiles = async () => {
 
         return `
           <div class="single-tile ${completed && 'tile-completed'}">
-            
             <div class="tile-links">
 
               <!-- Edit Button/Link -->
