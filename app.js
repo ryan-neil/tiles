@@ -19,18 +19,18 @@ app.use(errorHandlerMiddleware); // custom error handler middleware
 
 // DJ, spin that sh*t...
 const start = async () => {
-	const { PORT } = process.env || 9001;
-	const { MONGO_URI } = process.env;
+  const { PORT } = process.env || 9001;
+  const { DATABASE_URI } = process.env;
 
-	try {
-		// connect to database
-		await connectDB(MONGO_URI);
-		// fire up the server once we successfully connect to the database
-		app.listen(PORT, () =>
-			console.log(`Server listening at: http://localhost:${PORT}`)
-		);
-	} catch (error) {
-		console.log(error);
-	}
+  try {
+    // connect to database
+    await connectDB(DATABASE_URI);
+    // fire up the server once we successfully connect to the database
+    app.listen(PORT, () =>
+      console.log(`Server listening at: http://localhost:${PORT}`)
+    );
+  } catch (error) {
+    console.log(error);
+  }
 };
 start();

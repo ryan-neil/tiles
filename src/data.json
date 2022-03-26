@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "completed": false,
+    "name": "Hike with Kate"
+  },
+  {
+    "id": 2,
+    "completed": false,
+    "name": "Bring car in for service"
+  },
+  {
+    "id": 3,
+    "completed": true,
+    "name": "Wash dishes"
+  }
+]

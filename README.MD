@@ -18,14 +18,16 @@ The frontend of the application consists of a very simple form and list. By comm
 
 <br>
 
-__Light Mode:__
+**Light Mode:**
+
 <p align="left">
   <img src="./assets/tiles-screenshot_light.png" width="550">
 </p>
 
 <br>
 
-__Dark Mode:__
+**Dark Mode:**
+
 <p align="left">
   <img src="./assets/tiles-screenshot_dark.png" width="550">
 </p>
@@ -33,17 +35,20 @@ __Dark Mode:__
 <br>
 
 # 🚀 Build Features
-* ☁️ __Cloud database__: Setting up and connecting to a MongoDB cloud database and persist data to the cloud
-* ❌ __CRUD logic__: Use of all CRUD (Create, Read, Update, and Delete) operations
-* 🌿 __API__: Creating the API that communicates with the database
-* 🌜 __Dark mode__: Tiles offers a clean, modern dark theme for those early mornings or late night brain dumps
+
+- ☁️ **Cloud database**: Setting up and connecting to a MongoDB cloud database and persist data to the cloud
+- ❌ **CRUD logic**: Use of all CRUD (Create, Read, Update, and Delete) operations
+- 🌿 **API**: Creating the API that communicates with the database
+- 🌜 **Dark mode**: Tiles offers a clean, modern dark theme for those early mornings or late night brain dumps
 
 ### Resources
-  * [Persistent Memory Explained - IBM](https://www.youtube.com/watch?v=7gkr-_t7wAk)
+
+- [Persistent Memory Explained - IBM](https://www.youtube.com/watch?v=7gkr-_t7wAk)
 
 # ⚙️ App Configuration
 
 ### Table of Contents
+
 1. [⚡️ Get started](#⚡️-get-started)
 2. [🧐 What's inside?](#🧐-whats-inside)
 3. [🗂️ Repo Folder Breakdown](#🗂️-repo-folder-breakdown)
@@ -57,6 +62,7 @@ To get a local version of the application up and running follow these steps:
 ### Installation
 
 #### 1. Clone the repo:
+
 ```bash
 git clone https://github.com/ryan-neil/tiles.git
 ```
@@ -64,28 +70,32 @@ git clone https://github.com/ryan-neil/tiles.git
 #### 2. Install all required npm packages:
 
 _Production_ dependencies:
+
 ```bash
 npm install
 ```
 
 _Development_ dependencies:
+
 ```bash
-npm install --save-dev nodemon 
+npm install --save-dev nodemon
 ```
 
 #### 3. Configure .env file:
 
-In order to run the project, setup `.env` file with a PORT variable and `MONGO_URI` variable equal to your personal database connection string.
+In order to run the project, setup `.env` file with a PORT variable and `DATABASE_URI` variable equal to your personal database connection string.
 
 Input API keys into `.env` file:
+
 ```bash
 PORT='ENTER PORT'
-MONGO_URI='ENTER URI STRING'
+DATABASE_URI='ENTER URI STRING'
 ```
 
 #### 4. Run the application:
 
 _Production_ environment:
+
 ```bash
 npm run start
 ```
@@ -93,14 +103,16 @@ npm run start
 <br>
 
 # 🧐 What's inside?
+
 A quick look at the files and directories you'll see in the repo.
 
 #### Built with:
-* HTML
-* CSS
-* JavaScript
-    * [Express.js](https://expressjs.com/): Backend things.
-* [MongoDB](https://www.mongodb.com/atlas): Database things
+
+- HTML
+- CSS
+- JavaScript
+  - [Express.js](https://expressjs.com/): Backend things.
+- [MongoDB](https://www.mongodb.com/atlas): Database things
 
 <br>
 
@@ -140,25 +152,26 @@ A quick look at the files and directories you'll see in the repo.
 
 # 🗂️ Repo Folder Breakdown
 
-/`src`/`controllers`: This __folder__ contains information regarding all app controllers.
+/`src`/`controllers`: This **folder** contains information regarding all app controllers.
 
-/`src`/`db`: This __folder__ contains the database connection logic.
+/`src`/`db`: This **folder** contains the database connection logic.
 
-/`src`/`errors`: This __folder__ contains the custom error handling.
+/`src`/`errors`: This **folder** contains the custom error handling.
 
-/`src`/`middleware`: This __folder__ contains our custom middleware functions.
+/`src`/`middleware`: This **folder** contains our custom middleware functions.
 
-/`src`/`models`: This __folder__ contains the Schema for out MongoDB cloud database.
+/`src`/`models`: This **folder** contains the Schema for out MongoDB cloud database.
 
-/`src`/`public`: This __folder__ contains all the client facing code (images, style sheets, frontend javascript, etc.).
+/`src`/`public`: This **folder** contains all the client facing code (images, style sheets, frontend javascript, etc.).
 
-/`src`/`routes`: This __folder__ consists of all of our application routing logic. 
+/`src`/`routes`: This **folder** consists of all of our application routing logic.
 
-/`src`/`app.js`: This __file__ has all of the application server logic, like starting the server, routes to use, serving custom middleware, etc.
+/`src`/`app.js`: This **file** has all of the application server logic, like starting the server, routes to use, serving custom middleware, etc.
 
 <br>
 
 ---
 
 ### License
+
 Nahh © [Ryan Neil](https://github.com/ryan-neil)
