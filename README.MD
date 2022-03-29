@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/tiles">
-    <img src="./assets/repo-header.svg" width="550">
+    <img src="./assets/header.svg" width="550">
   </a>
 </p>
 
