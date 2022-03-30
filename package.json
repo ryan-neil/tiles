@@ -3,16 +3,14 @@
   "version": "1.0.0",
   "description": "simple crud todo application",
   "scripts": {
-    "start": "node server/app.js",
-    "start:dev": "nodemon server/app.js"
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "mongoose": "^5.11.10"
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.14"

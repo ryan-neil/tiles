@@ -9,55 +9,59 @@ const id = new URLSearchParams(params).get('id');
 let tempName;
 
 const showTile = async () => {
-	try {
-		const { data: { tile } } = await axios.get(`/api/v1/tiles/${id}`);
-		const { _id: tileID, completed, name } = tile;
+  try {
+    const {
+      data: { tile },
+    } = await axios.get(`http://localhost:9001/api/v1/tiles/${id}`);
+    const { _id: tileID, completed, name } = tile;
 
-		tileIDDOM.textContent = tileID;
-		tileNameDOM.value = name;
-		tempName = name;
-		if (completed) {
-			tileCompletedDOM.checked = true;
-		}
-	} catch (error) {
-		console.log(error);
-	}
+    tileIDDOM.textContent = tileID;
+    tileNameDOM.value = name;
+    tempName = name;
+    if (completed) {
+      tileCompletedDOM.checked = true;
+    }
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 showTile();
 
 editFormDOM.addEventListener('submit', async (e) => {
-	editBtnDOM.textContent = 'Loading...';
-	e.preventDefault();
-	try {
-		const tileName = tileNameDOM.value;
-		const tileCompleted = tileCompletedDOM.checked;
+  editBtnDOM.textContent = 'Loading...';
+  e.preventDefault();
+  try {
+    const tileName = tileNameDOM.value;
+    const tileCompleted = tileCompletedDOM.checked;
 
-		const { data: { tile } } = await axios.patch(`/api/v1/tiles/${id}`, {
-			name: tileName,
-			completed: tileCompleted
-		});
+    const {
+      data: { tile },
+    } = await axios.patch(`http://localhost:9001/api/v1/tiles/${id}`, {
+      name: tileName,
+      completed: tileCompleted,
+    });
 
-		const { _id: tileID, completed, name } = tile;
+    const { _id: tileID, completed, name } = tile;
 
-		tileIDDOM.textContent = tileID;
-		tileNameDOM.value = name;
-		tempName = name;
-		if (completed) {
-			tileCompletedDOM.checked = true;
-		}
-		formAlertDOM.style.display = 'block';
-		formAlertDOM.textContent = `success, edited tile`;
-		formAlertDOM.classList.add('text-success');
-	} catch (error) {
-		console.error(error);
-		tileNameDOM.value = tempName;
-		formAlertDOM.style.display = 'block';
-		formAlertDOM.innerHTML = `error, please try again`;
-	}
-	editBtnDOM.textContent = 'Edit';
-	setTimeout(() => {
-		formAlertDOM.style.display = 'none';
-		formAlertDOM.classList.remove('text-success');
-	}, 3000);
+    tileIDDOM.textContent = tileID;
+    tileNameDOM.value = name;
+    tempName = name;
+    if (completed) {
+      tileCompletedDOM.checked = true;
+    }
+    formAlertDOM.style.display = 'block';
+    formAlertDOM.textContent = `success, edited tile`;
+    formAlertDOM.classList.add('text-success');
+  } catch (error) {
+    console.error(error);
+    tileNameDOM.value = tempName;
+    formAlertDOM.style.display = 'block';
+    formAlertDOM.innerHTML = `error, please try again`;
+  }
+  editBtnDOM.textContent = 'Edit';
+  setTimeout(() => {
+    formAlertDOM.style.display = 'none';
+    formAlertDOM.classList.remove('text-success');
+  }, 3000);
 });
