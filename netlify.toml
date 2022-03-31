@@ -1,4 +1,14 @@
-# example netlify.toml
 [build]
-  publish = "client"
+	functios = "functions"
+	publish = "server"
+	command = "echo No build command"
+	node_bundler = "esbuild"
 
+[dev]
+	publish = "server"
+	node_bundler = "esbuild"
+
+[[redirects]]
+	from = "/api/v1/tiles/*"
+	to = "/.netlify/functions/api"
+	status = 200
