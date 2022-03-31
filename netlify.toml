@@ -1,14 +1,15 @@
 [build]
-	functios = "functions"
-	publish = "server"
-	command = "echo No build command"
+	publish = "client"
+	functions = "functions"
+	command = "echo 'default context'"
 	node_bundler = "esbuild"
 
 [dev]
-	publish = "server"
+	publish = "client"
+	functions = "functions"
 	node_bundler = "esbuild"
 
 [[redirects]]
-	from = "/api/v1/tiles/*"
-	to = "/.netlify/functions/api"
+	from = "/*"
+	to = "/.netlify/functions/api/:splat"
 	status = 200
