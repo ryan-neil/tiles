@@ -2,7 +2,6 @@
   "name": "tiles-backend",
   "version": "1.0.0",
   "description": "Simple todo application",
-  "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
     "dev": "nodemon server/server.js"

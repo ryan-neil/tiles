@@ -14,7 +14,7 @@ const showTiles = async () => {
     // fetch all tiles
     const {
       data: { tiles },
-    } = await axios.get('http://localhost:9001/api/v1/tiles');
+    } = await axios.get('http://localhost:8888/api/tiles');
 
     // check for tiles in database
     if (tiles.length < 1) {
@@ -80,7 +80,7 @@ tilesDOM.addEventListener('click', async (e) => {
 
     try {
       // axios delete: https://axios-http.com/docs/api_intro
-      await axios.delete(`http://localhost:9001/api/v1/tiles/${id}`);
+      await axios.delete(`http://localhost:8888/api/tiles/${id}`);
       // re-fetch all tiles
       showTiles();
     } catch (error) {
@@ -102,7 +102,7 @@ formDOM.addEventListener('submit', async (e) => {
   try {
     // if successful: pass data (name) to the server
     // axios post: https://axios-http.com/docs/post_example
-    await axios.post('http://localhost:9001/api/v1/tiles', { name });
+    await axios.post('http://localhost:8888/api/tiles', { name });
     // re-fetch tiles
     showTiles();
     // add correct alerts
