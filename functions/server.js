@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const serverless = require('serverless-http');
-
+// internal
 const tilesRoutes = require('../server/routes/tiles');
 const connectDB = require('../server/db/connect');
 const notFound = require('../server/middleware/notFound');
@@ -9,7 +9,6 @@ const errorHandlerMiddleware = require('../server/middleware/errorHandler');
 
 const app = express();
 app.use(cors());
-
 app.use(express.json());
 
 // serve routes

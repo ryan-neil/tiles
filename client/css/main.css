@@ -64,7 +64,7 @@
   --inputBackgroundColor: var(--grey-50);
   --inputBorderColor: var(--grey-300);
   --textColor: var(--grey-1000);
-  --iconHoverColor: var(--grey-1000);
+  --iconHoverColor: var(--grey-300);
   --colorSuccess: #50ff4a;
   --colorDanger: #ff504a;
 }
