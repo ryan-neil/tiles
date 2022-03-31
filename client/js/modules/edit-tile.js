@@ -12,7 +12,7 @@ const showTile = async () => {
   try {
     const {
       data: { tile },
-    } = await axios.get(`https://tiles-todo.netlify.app/api/tiles/${id}`);
+    } = await axios.get(`/api/tiles/${id}`);
     const { _id: tileID, completed, name } = tile;
 
     tileIdDOM.textContent = tileID;
@@ -37,7 +37,7 @@ editFormDOM.addEventListener('submit', async (e) => {
 
     const {
       data: { tile },
-    } = await axios.patch(`https://tiles-todo.netlify.app/api/tiles/${id}`, {
+    } = await axios.patch(`/api/tiles/${id}`, {
       name: tileName,
       completed: tileCompleted,
     });
