@@ -14,6 +14,8 @@ In this project my focus was mainly on the backend and building an application t
 
 The app is being deployed on Netlify and utilizes _serverless functions_ to build out the "serverless" backend.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/be78c529-a3b3-4c71-86b9-9e6a3da2768c/deploy-status)](https://app.netlify.com/sites/tiles-todo/deploys)
+
 [Live demo >>](https://tiles-todo.netlify.app/)
 
 <br>
